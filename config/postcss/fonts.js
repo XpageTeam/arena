@@ -32,5 +32,17 @@ module.exports = {
 				}
 			}
 		},
+
+		"UniSans": {
+			variants: {
+				italic: {
+					900: {
+						url: {
+							woff: "../fonts/UniSansHeavyItalic.woff",
+						}
+					},
+				}
+			}
+		},
 	}
 }

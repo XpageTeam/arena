@@ -8,7 +8,64 @@ html(lang="ru")
 	body.main.loading
 		include inc/header.pug
 		main#content
-			.wrapper
+			.main-banner
+				h1.main-banner__title Аренда поля
+				.main-banner__subtitle для твоей команды
+				.main-banner__btn
+					a(href="").btn забронировать поле
+				.areas
+					.areas__list
+						a(href="#").areas__item
+							.areas__item-img
+								include ../img/ico-area-1.svg
+							.areas__item-title Футбольное поле
+						a(href="#").areas__item
+							.areas__item-img
+								include ../img/ico-area-2.svg
+							.areas__item-title Волейбольная площадка
+						a(href="#").areas__item
+							.areas__item-img
+								include ../img/ico-area-3.svg
+							.areas__item-title Теннисный стол
+			.services
+				.services__title дополнительные услуги
+				.services__list
+					a(href="#").services__item
+						.services__item-img
+							include ../img/ico-serv-1.svg
+						.services__item-title Аренда поля для тренировок, секций, мероприятий
+					a(href="#").services__item
+						.services__item-img
+							include ../img/ico-serv-2.svg
+						.services__item-title Сауна
+					a(href="#").services__item
+						.services__item-img
+							include ../img/ico-serv-3.svg
+						.services__item-title Скалодром
+					a(href="#").services__item
+						.services__item-img
+							include ../img/ico-serv-4.svg
+						.services__item-title Хоккейный центр Никиты Нестероваий
+					a(href="#").services__item
+						.services__item-img
+							include ../img/ico-serv-5.svg
+						.services__item-title Квест комната
+			.slider-full
+				.slider-full__main
+					.swiper-list
+						.swiper-wrapper
+							.swiper-slide
+								figure.slider-full__slide
+									img(src="img/slider-1.jpg", alt="")
+				.slider-full__nav
+					.swiper-list
+						.swiper-wrapper
+							.swiper-slide
+								figure.slider-full__slide
+									img(src="img/slider-1.jpg", alt="")
+
+
+
 				
 		include inc/footer.pug
-		include inc/scripts.pug
+		include inc/scripts.pug 
