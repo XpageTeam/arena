@@ -36,7 +36,7 @@ module.exports = {
 		"UniSans": {
 			variants: {
 				italic: {
-					900: {
+					800: {
 						url: {
 							woff: "../fonts/UniSansHeavyItalic.woff",
 						}

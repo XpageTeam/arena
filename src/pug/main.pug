@@ -8,11 +8,12 @@ html(lang="ru")
 	body.main.loading
 		include inc/header.pug
 		main#content
-			.main-banner
-				h1.main-banner__title Аренда поля
-				.main-banner__subtitle для твоей команды
-				.main-banner__btn
-					a(href="").btn забронировать поле
+			.main-banner__cont
+				.main-banner
+					h1.main-banner__title Аренда поля
+					.main-banner__subtitle для твоей<br> команды
+					.main-banner__btn
+						a(href="").btn забронировать поле 
 				.areas
 					.areas__list
 						a(href="#").areas__item
@@ -51,18 +52,45 @@ html(lang="ru")
 							include ../img/ico-serv-5.svg
 						.services__item-title Квест комната
 			.slider-full
+				.slider-full__arrow
+					.swiper-button.swiper-button-prev
+					.swiper-button.swiper-button-next
+
 				.slider-full__main
 					.swiper-list
 						.swiper-wrapper
 							.swiper-slide
 								figure.slider-full__slide
-									img(src="img/slider-1.jpg", alt="")
+									img(src="img/photos/slider-1.jpg", alt="")
+							.swiper-slide
+								figure.slider-full__slide
+									img(src="img/photos/slider-2.jpg", alt="")
+							.swiper-slide
+								figure.slider-full__slide
+									img(src="img/photos/slider-3.jpg", alt="")
+							.swiper-slide
+								figure.slider-full__slide
+									img(src="img/photos/slider-4.jpg", alt="")
 				.slider-full__nav
 					.swiper-list
 						.swiper-wrapper
 							.swiper-slide
 								figure.slider-full__slide
-									img(src="img/slider-1.jpg", alt="")
+									img(src="img/photos/slider-1.jpg", alt="")
+							.swiper-slide
+								figure.slider-full__slide
+									img(src="img/photos/slider-2.jpg", alt="")
+							.swiper-slide
+								figure.slider-full__slide
+									img(src="img/photos/slider-3.jpg", alt="")
+							.swiper-slide
+								figure.slider-full__slide
+									img(src="img/photos/slider-4.jpg", alt="")
+			.map
+				.map-mask
+					#map
+						<!--ico-marker.svg-->
+						img(src="img/photos/map.jpg", alt="")
 
 
 

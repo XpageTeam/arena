@@ -1,0 +1,32 @@
+.areas
+	border-top: 1px solid rgba(119, 119, 119, 0.3)
+	border-bottom: 1px solid rgba(119, 119, 119, 0.3)
+
+	&__list
+		display: flex
+
+	&__item
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		width: calc(100% / 3)
+		padding: 55px 90px 55px 20px
+
+		&:after
+			content: ''
+			display: block
+			size: 10px
+			background-image: url('../img/ico-arrow.svg')
+			background-repeat: no-repeat
+			background-position: 50%
+			position: absolute calc(50% - 5px) 85px * *
+
+
+
+		&:not(:last-child)
+			border-right: 1px solid rgba(119, 119, 119, 0.3)
+
+		&-img
+			flex: none
+			margin-right: 50px

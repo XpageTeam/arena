@@ -1,18 +1,19 @@
-header.head
+header.head-cont
 	.wrapper
-		.head-logo
-			a(href="")
-				img(src="img/logo.svg", alt="")
-		address.head-address
-			.head-address__city Челябинск
-			.head-address__street Молодогвардейцев, 7  (Фиеста)
-		.head-phone
-			a(href="tel:83512188114") 8 351 218-81-14
-		.head-menu
-			ul.h-menu__list
-				each link in ['Об Арене', 'забронировать', 'Правила', 'Фотогалерея', 'Контакты']
-					li.h-menu__item
-						a(href="").h-menu__link=link
-		.head-btn
-			a(href="").btn Оплата
+		.head
+			.head-logo
+				a(href="")
+					img(src="img/logo.svg", alt="")
+			address.head-address
+				.head-address__city Челябинск
+				.head-address__street Молодогвардейцев, 7  (Фиеста)
+			.head-phone
+				a(href="tel:83512188114") 8 351 218-81-14
+			.head-menu
+				ul.h-menu__list
+					each link in ['Об Арене', 'забронировать', 'Правила', 'Фотогалерея', 'Контакты']
+						li.h-menu__item
+							a(href="").h-menu__link=link
+			.head-btn
+				a(href="").btn Оплата
 
