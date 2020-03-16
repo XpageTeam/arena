@@ -1,0 +1,65 @@
+.slider-full
+	display: flex
+	position: relative
+
+	img
+		display: block
+		object-fit: cover
+		object-position: center
+		
+	&__main, &__nav
+		width: 50% 
+
+	&__nav
+
+		.swiper
+			&-wrapper
+				flex-wrap: wrap
+				transform: none !important
+
+
+			&-slide
+				width: calc(100% / 2) !important
+
+				&.swiper-slide-thumb-active, &.swiper-slide-active
+					display: none !important
+
+				&.swiper-slide-next.swiper-slide-thumb-active
+					display: block !important
+
+				&:nth-child(5)
+					~ .swiper-slide
+						display: none !important
+
+				&.swiper-slide-thumb-active
+					&:nth-child(3)
+						+ .swiper-slide
+							display: block !important
+
+
+
+	.slider-full__arrow
+		position: absolute * 0 0 0
+		display: flex
+		justify-content: center
+
+
+		.swiper-button
+			size: 56px
+			background-color: var(--main-color)
+			margin: 0
+			position: static
+			background-image: url('../img/ico-arrow-black.svg')
+			background-position: 50%
+			background-repeat: no-repeat
+
+
+
+			&:after
+				display: none
+
+			&-next
+				background-color: #A9EC1C
+
+			&-prev
+				transform: rotate(180deg)

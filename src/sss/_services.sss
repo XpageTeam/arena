@@ -1,0 +1,47 @@
+.services
+	margin: 100px 0
+
+	&__title
+		font-family: var(--second-font)
+		color: var(--main-color)
+		font-style: italic
+		font-weight: 800
+		font-size: rem(40)
+		line-height: 127.9%
+
+		text-align: center
+		letter-spacing: 0.06em
+		text-transform: uppercase
+		margin-bottom: 100px
+
+	&__list
+		max-width: 1000px
+		margin: 0 auto
+
+	&__item
+		position: relative
+		display: flex
+		align-items: center
+		padding: 40px 0
+
+		&:after
+			content: ''
+			display: block
+			size: 10px
+			background-image: url('../img/ico-arrow.svg')
+			background-repeat: no-repeat
+			background-position: 50%
+			position: absolute calc(50% - 5px) 20px * *
+			transition: transform .3s ease-in-out
+
+
+		&:not(:last-child)
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+
+		&:hover
+			&:after
+				transform: translate3d(20px,0,0)
+
+		&-img
+			flex: none
+			margin-right: 50px

@@ -1,0 +1,42 @@
+.map
+	margin: 100px auto 50px
+	display: flex
+	justify-content: center
+
+	&-mask
+		position: relative
+		padding: 80px
+		background: url('../img/map-line.svg') no-repeat center
+
+		&:after
+			content: ''
+			display: block
+			size: 75px 152px
+			background: url('../img/ico-arrow-map.svg') no-repeat center
+			position: absolute 50% * * calc(100% + 45px)
+			transform: translate3d(0,-50%,0)
+
+		&:before
+			content: ''
+			display: block
+			size: 75px 152px
+			background: url('../img/ico-arrow-map.svg') no-repeat center
+			position: absolute 50% calc(100% + 45px) * * 
+			transform: translate3d(0,-50%,0) rotate(180deg)
+
+			
+#map
+	position: relative
+	background-size: contain
+	size: 545px 469px
+	clip-path: polygon(45% -40%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)
+
+
+
+
+	img
+		display: block
+		width: 100%
+		object-fit: cover
+		object-position: center
+	

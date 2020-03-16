@@ -11,9 +11,13 @@ header.head-cont
 				a(href="tel:83512188114") 8 351 218-81-14
 			.head-menu
 				ul.h-menu__list
-					each link in ['Об Арене', 'забронировать', 'Правила', 'Фотогалерея', 'Контакты']
-						li.h-menu__item
-							a(href="").h-menu__link=link
+					each link, i in ['Об Арене', 'забронировать', 'Правила', 'Фотогалерея', 'Контакты']
+						if(i == 0)
+							li.h-menu__item.active
+								a(href="").h-menu__link Об Арене
+						else
+							li.h-menu__item
+								a(href="").h-menu__link=link
 			.head-btn
 				a(href="").btn Оплата
 

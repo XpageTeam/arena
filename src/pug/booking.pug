@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Главная
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		include mixins/title-block.pug
+		+titleBLock(["", "Футбольное поле"])
+
+		main#content
+			.booking-cont
+				.wrapper
+					.booking
+						.booking-stage
+							.bs-title 1. Выберите дату
+							.bs-dates__title
+								.booking-title Сентябрь
+							.bs-dates__container
+								.bs-dates__container-btn.bs-dates__container-btn--prev
+									.dates-btn
+								.bs-dates__container-list
+									.bs-dates__list
+										.dates-list
+											- var days = ["ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ", "ВС"]
+											- for (let date = 1, day = 0; date <= 31; date++, day++)
+												if (date == 11)
+													.dates-list__item.dates-list__item--current
+														.dl-item
+															if (day == 5 || day == 6)
+																.dl-item__day.dl-item__day--holiday=days[day]
+															else
+																.dl-item__day=days[day]
+															.dl-item__date=date
+												else if (date > 11 && date < 16)
+													.dates-list__item
+														.dl-item
+															if (day == 5 || day == 6)
+																.dl-item__day.dl-item__day--holiday=days[day]
+															else
+																.dl-item__day=days[day]
+															.dl-item__date=date
+												else if (date == 16)
+													.dates-list__item
+														.dl-item
+															if (day == 5 || day == 6)
+																.dl-item__day.dl-item__day--holiday=days[day]
+															else
+																.dl-item__day=days[day]
+															.dl-item__date=date
+												else
+													.dates-list__item
+														.dl-item
+															if (day == 5 || day == 6)
+																.dl-item__day.dl-item__day--holiday=days[day]
+															else
+																.dl-item__day=days[day]
+															.dl-item__date=date
+												- if (day == 6) day = -1
+
+								.bs-dates__container-btn.bs-dates__container-btn--next
+									.dates-btn
+
+						.booking-stage
+							.bs-title 2. Выберите время и поле
+							.bs-status
+								.bs-status__list
+									.bs-status__item
+										.bs-status__item-ico
+											img(src="img/ico-free.svg", alt="")
+										.bs-status__item-text Свободно
+									.bs-status__item
+										.bs-status__item-ico
+											img(src="img/ico-nofree.svg", alt="")
+										.bs-status__item-text Занято
+
+						.booking-results
+							.br-list
+								each name, i in ['1 поле', '2 поле', '3 поле']
+									.br-item
+										.br-item__top
+											.br-item__name=name
+											.br-item__gallery
+												a(href="") Посмотреть поле
+												.br-item__gallery--hidden
+													a(href="")
+										.br-item__rows
+											- for (let j = 1; j < 9; j++)
+
+												if(j > 3 && j < 8)
+													.br-row.br-row--on
+														input(type="checkbox" id=i+""+j).br-row__input
+														label(for=i+""+j).br-row__label
+															span="0"+j+":00-1"+j+":30"
+															span 500 руб.
+												else
+													.br-row
+														input(type="checkbox" id=i+""+j).br-row__input
+														label(for=i+""+j).br-row__label
+															span="0"+j+":00-1"+j+":30"
+															span 500 руб.
+
+						.booking-results__bot
+							.br-bot__list
+								.br-bot__item
+									a.default-btn(href="") назад
+								.br-bot__item
+								.br-bot__item
+									.br-bot__text Итоговая<br> стоимость: 500 руб.
+									a.btn(href="") забронировать
+
+
+
+
+				
+		include inc/footer-inner.pug
+		include inc/scripts.pug 

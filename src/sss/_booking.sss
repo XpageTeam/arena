@@ -1,0 +1,178 @@
+.booking
+	&-stage
+		margin-bottom: 50px
+
+.bs
+	&-title
+		color: var(--main-color)
+		margin-bottom: 30px
+
+	&-dates__title
+		background-color: var(--body-bg-color)
+		padding: 0 15px
+		transform: translate3d(30px,12px,0)
+		display: inline-block
+
+.dates-list
+	display: flex
+	padding: 40px 30px
+	justify-content: space-between
+
+	border: 1px solid rgba(131, 131, 131, 0.2)
+	border-radius: 5px
+
+	&__item
+		&--current
+			.dl-item__date
+				background: #1F1F1F
+
+.dl-item
+	font-weight: 500
+	font-size: 12px
+	line-height: 26px
+	letter-spacing: 0.035em
+	display: flex
+	flex-direction: column
+	align-items: center
+	cursor: pointer
+
+
+	&__date
+		size: 35px
+		display: flex
+		justify-content: center
+		align-items: center
+		border: 1px solid transparent
+		border-radius: 5px
+		transition: border-color .3s ease-in-out
+
+		&:hover
+			border-color: var(--main-color)
+
+
+
+	&__day--holiday
+		color: #666666
+
+		+ .dl-item__date
+			color: #666666
+
+.bs-status
+
+	&__list
+		display: flex
+
+	&__item
+		position: relative
+		display: flex
+		align-items: center
+		margin-right: 75px
+
+		&-ico
+			margin-right: 20px
+			display: flex
+			flex: none
+
+
+.booking-results
+	margin-top: 60px
+
+
+.br
+	&-list
+		display: flex
+		margin: 0 0 -105px -105px
+
+	&-item
+		width: calc((100% - 105px * 3) / 3)
+		margin: 0 0 105px 105px
+
+		&__top
+			display: flex
+			justify-content: space-between
+			border-bottom: 2px solid var(--main-color)
+			padding-bottom: 20px
+			margin-bottom: 25px
+
+		&__gallery
+			a
+				font-size: 12px
+				line-height: 24px
+
+				letter-spacing: 0.035em
+
+				color: #666666
+
+	&-row
+		position: relative
+
+		&:not(:last-child)
+			margin-bottom: 12px
+
+		&__input
+			position: absolute 0 0 * *
+			opacity: 0
+			pointer-events: none
+
+			&:checked
+				+ .br-row__label
+					padding-left: 60px
+					background-color: rgba(190, 255, 51, 0.5)
+
+					&:before
+						opacity: 1
+			&:not(:checked)
+				+ .br-row__label
+
+					&:before
+						transition: none
+
+
+		&__label
+			background: rgba(131, 131, 131, 0.09)
+			border-radius: 5px
+			padding: 12px 20px
+			display: flex
+			justify-content: space-between
+			cursor: pointer
+			transition: background .3s ease-in-out
+
+
+			font-size: 14px
+			letter-spacing: 0.035em
+
+			color: #666666
+
+			&:before
+				content: ''
+				display: block
+				position: absolute 10px * * 20px
+				size: 25px
+				border-radius: 5px
+				background: url('../img/ico-checked.svg') no-repeat center, #272727
+				opacity: 0
+				transition: opacity .3s ease-in-out
+
+
+		&:not(.br-row--on)
+			pointer-events: none
+
+		&--on
+			.br-row__label
+				background-color: rgba(190, 255, 51, 0.15)
+				color: #BEFF33
+
+.booking-results__bot
+	margin-top: 50px
+
+.br-bot
+	&__list
+		display: flex
+		margin: 0 0 -105px -105px
+
+	&__item
+		width: calc((100% - 105px * 3) / 3)
+		margin: 0 0 105px 105px
+		display: flex
+		justify-content: space-between
+		align-items: center
