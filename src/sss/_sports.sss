@@ -1,0 +1,46 @@
+.sports
+	&__title
+		font-family: var(--second-font)
+		font-style: italic
+		font-weight: 800
+		font-size: 40px
+		line-height: 127.9%
+
+		text-align: center
+		letter-spacing: 0.02em
+		text-transform: uppercase
+
+		color: var(--main-color)
+		margin-bottom: 70px
+
+	&__list
+		max-width: 450px
+		margin: 0 auto
+
+	&__item
+		position: relative
+		display: flex
+		align-items: center
+		padding: 35px 0
+		transition: background .3s ease
+
+		&:hover
+			&:after
+				transform: translate3d(-10px,0,0)
+
+		&:after
+			content: ''
+			display: block
+			size: 10px
+			background-image: url('../img/ico-arrow.svg')
+			background-repeat: no-repeat
+			background-position: 50%
+			position: absolute calc(50% - 5px) 0 * *
+			transition: transform .3s ease-in-out
+
+		&:not(:last-child)
+			border-bottom: 1px solid rgba(119, 119, 119, 0.3)
+
+		&-img
+			margin-right: 50px
+			flex: none

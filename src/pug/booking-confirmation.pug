@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Подтверждение бронирования
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		include mixins/title-block.pug
+		+titleBLock(["", "Подтверждение бронирования"])
+
+		main#content
+			.booking-conf-cont
+				.wrapper
+					.booking-confirmation
+						.bc-list
+							.bc-item
+								.bc-item__el Площадка
+								.bc-item__el Футбол, поле 1
+							.bc-item
+								.bc-item__el Дата
+								.bc-item__el 12 сентября
+							.bc-item
+								.bc-item__el Промежуток времени
+								.bc-item__el 11:00 - 11:30
+							.bc-item
+								.bc-item__el 
+									.checkbox
+										input(type="checkbox" id="1").checkbox__input
+										label(for="1").checkbox__input Аренда мяча
+
+								.bc-item__el 100 руб.
+							.bc-item
+								.bc-item__el 
+									.checkbox
+										input(type="checkbox" id="2").checkbox__input
+										label(for="2").checkbox__input Аренда манишек
+
+								.bc-item__el 300 руб.
+
+			
+
+
+
+
+				
+		include inc/footer-inner.pug
+		include inc/scripts.pug 
