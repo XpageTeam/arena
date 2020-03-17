@@ -1,5 +1,27 @@
+.main
+	.map
+		margin: 100px auto 50px
+		
+		&-mask
+
+			&:after
+				content: ''
+				display: block
+				size: 75px 152px
+				background: url('../img/ico-arrow-map.svg') no-repeat center
+				position: absolute 50% * * calc(100% + 45px)
+				transform: translate3d(0,-50%,0)
+
+			&:before
+				content: ''
+				display: block
+				size: 75px 152px
+				background: url('../img/ico-arrow-map.svg') no-repeat center
+				position: absolute 50% calc(100% + 45px) * * 
+				transform: translate3d(0,-50%,0) rotate(180deg)
+
+
 .map
-	margin: 100px auto 50px
 	display: flex
 	justify-content: center
 
@@ -8,21 +30,6 @@
 		padding: 80px
 		background: url('../img/map-line.svg') no-repeat center
 
-		&:after
-			content: ''
-			display: block
-			size: 75px 152px
-			background: url('../img/ico-arrow-map.svg') no-repeat center
-			position: absolute 50% * * calc(100% + 45px)
-			transform: translate3d(0,-50%,0)
-
-		&:before
-			content: ''
-			display: block
-			size: 75px 152px
-			background: url('../img/ico-arrow-map.svg') no-repeat center
-			position: absolute 50% calc(100% + 45px) * * 
-			transform: translate3d(0,-50%,0) rotate(180deg)
 
 			
 #map

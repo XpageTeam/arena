@@ -52,15 +52,126 @@ document.addEventListener("DOMContentLoaded", function(){
 			thumbs: {
 				swiper: {
 					el: '.slider-full__nav .swiper-list',
-					slidesPerView: 1,
-					// spaceBetween: 0,
-					// watchSlidesVisibility: true,
-					// watchSlidesProgress: true,
+					slidesPerView: 2,
+					slidesPerColumn: 2,
 					multipleActiveThumbs: false,
 					loop: false,
+					navigation: {
+						nextEl: '.slider-full .swiper-button-next',
+						prevEl: '.slider-full .swiper-button-prev',
+					},
 					
 
 				}
+			},
+
+		});
+
+	
+	
+
+	});
+})
+
+
+// document.addEventListener("DOMContentLoaded", function(){
+// 	const sliderFullMain = document.querySelector('.slider-full__main .swiper-list');
+	
+// 	if (!sliderFullMain)
+// 		return
+
+// 	import("swiper/js/swiper.esm.js").then(function(Module){
+
+// 		const {Swiper, Navigation, EffectFade, Keyboard} = Module;
+
+// 		Swiper.use([Navigation, EffectFade, Keyboard]);
+
+
+
+// 		new Swiper(sliderFullMain, {
+// 			effect: "fade",
+// 			fadeEffect: {
+// 				crossFade: true
+// 			},
+// 			loop: true,
+
+// 			keyboard: {
+// 				enabled: true,
+// 				onlyInViewport: true
+// 			},
+// 			navigation: {
+// 				nextEl: '.slider-full .swiper-button-next',
+// 				prevEl: '.slider-full .swiper-button-prev',
+// 			},
+
+// 		});
+
+	
+	
+
+// 	});
+// })
+
+// document.addEventListener("DOMContentLoaded", function(){
+// 	const sliderFullSecond = document.querySelector('.slider-full__nav .swiper-list');
+	
+// 	if (!sliderFullSecond)
+// 		return
+
+// 	import("swiper/js/swiper.esm.js").then(function(Module){
+
+// 		const {Swiper, Navigation, Keyboard} = Module;
+
+// 		Swiper.use([Navigation, Keyboard]);
+
+
+
+// 		new Swiper(sliderFullSecond, {
+// 			slidesPerView: 2,
+// 			slidesPerColumn: 2,
+// 			keyboard: {
+// 				enabled: true,
+// 				onlyInViewport: true
+// 			},
+// 			navigation: {
+// 				nextEl: '.slider-full .swiper-button-next',
+// 				prevEl: '.slider-full .swiper-button-prev',
+// 			},
+
+
+// 		});
+
+	
+	
+
+// 	});
+// })
+
+
+document.addEventListener("DOMContentLoaded", function(){
+	const gallerySlider = document.querySelector('.gallery-slider .swiper-list');
+	
+	if (!gallerySlider)
+		return
+
+	import("swiper/js/swiper.esm.js").then(function(Module){
+
+		const {Swiper, Navigation, Keyboard} = Module;
+
+		Swiper.use([Navigation, Keyboard]);
+
+
+
+		new Swiper(gallerySlider, {
+			slidesPerView: 4,
+			slidesPerColumn: 2,
+			keyboard: {
+				enabled: true,
+				onlyInViewport: true
+			},
+			navigation: {
+				nextEl: '.gallery-slider .swiper-button-next',
+				prevEl: '.gallery-slider .swiper-button-prev',
 			},
 
 		});

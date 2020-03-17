@@ -1,18 +1,50 @@
 .popup
-	border-radius: 10px
-	padding: 30px 40px 40px !important
-	width: 430px
+	display: none
+	padding: 110px !important
+	width: 780px
 	max-width: 100%
+	background-color: #161616
+	border: 1px solid rgba(255, 255, 255, 0.15)
 
-	&#add-user
-		width: 469px
+	--input-hor-spacing: 26px
+	--input-vert-spacing: 26px
+
+
 
 	&__title
-		text-align: center
-		font-size: em(20)
-		line-height: calc(24 / 20)
-		color: #212121
-		margin: 0 0 30px
+		margin: 0 0 50px
+
+		font-family: var(--second-font)
+		font-style: italic
+		font-weight: 800
+		font-size: rem(30)
+		line-height: 127.9%
+		letter-spacing: 0.02em
+		text-transform: uppercase
+
+		color: var(--main-color)
+
+
+
+	&-form
+		background: #181818
+		padding: 50px 40px !important
+
+	.form__submit-text
+		a
+			color: var(--main-color)
+
+.fancybox-close-small
+	color: #fff
+
+	svg
+		opacity: 1
+		stroke-width: 1
+
+.modal-message
+	background: #181818
+	padding: 50px 40px !important
+	font-size: 17px
 
 .captcha
 	display: flex

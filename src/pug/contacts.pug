@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Контакты
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		include mixins/title-block.pug
+		+titleBLock(["", "Контакты"])
+
+		main#content
+			.contacts-cont
+				.wrapper
+					.contacts
+						.contacts-info
+							.contacts-item
+								.contacts-item__user Дятлов В. В. 
+								.contacts-item__post Директор ООО «ЧТК» Бизнес-парк Сигма-Партнер
+							.contacts-item
+								.contacts-item__user Шефф И. В.
+								.contacts-item__post Исполнительный директор спорт.комплекса «Арена»
+							.contacts-address
+								.contacts-address__label Главный офис
+								.contacts-address__address Челябинск, ул. Молодогвардейцев, 7  (Фиеста)
+							.contacts-contacts
+								.cc-item__el
+									.cc-item__label Телефон
+									.cc-item__text 
+										a(href="tel:") 8 351 218-81-14
+								.cc-item__el
+									.cc-item__label E-mail
+									.cc-item__text 
+										a(href="mailto:") kskarena@mail.ru
+							.contacts-item
+								.contacts-item__user Аминаев Данис Рашидович 
+								.contacts-item__post Специалист по развитию
+							.contacts-contacts
+								.cc-item__el
+									.cc-item__label Телефон
+									.cc-item__text
+										a(href="tel:89068942129") 8 906 894 21 29
+
+							a(href="").btn Вопрос руководству
+
+
+						.contacts-map
+							.map
+								.map-mask
+									#map
+										<!--ico-marker.svg-->
+										img(src="img/photos/map.jpg", alt="")
+								
+
+
+
+
+				
+		include inc/footer-inner.pug
+		include inc/scripts.pug 

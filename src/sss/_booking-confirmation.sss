@@ -1,0 +1,45 @@
+.bc-item
+	display: flex
+	z-index: 1
+
+	&:not(:last-child)
+		margin-bottom: 15px
+
+	&__el
+		&:first-child
+			max-width: 310px
+			flex: 1 1 auto
+
+.bc-list
+	&:not(:first-child)
+		margin-top: 20px
+
+.bc-total
+	position: relative
+	margin-top: 30px
+	color: var(--main-color)
+	padding: 10px 0
+
+	&:before
+		content: ''
+		display: block
+		position: absolute 0 0 0 50%
+		width: 100vw
+		background-color: #272727
+		transform: translate3d(-50%,0,0)
+		z-index: 0
+
+
+.bc-form
+	margin-top: 30px
+	
+	.form__inputs--4
+		grid-template-columns: minmax(260px, 260px) minmax(260px, 260px) minmax(260px, 260px) 1fr
+
+	.form__submit
+		display: flex
+		align-items: center
+		margin-top: auto
+
+		&-btn
+			margin-right: 20px

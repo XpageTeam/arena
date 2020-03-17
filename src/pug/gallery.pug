@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Фотогалерея
+		include inc/head.pug
+		include inc/css.pug
+	body.inner.loading
+		include inc/header.pug
+		include mixins/title-block.pug
+		+titleBLock(["", "Фотогалерея"])
+
+		main#content
+			.gallery
+				.gallery-slider
+					.gallery-slider__arrow
+						.swiper-button.swiper-button-prev
+						.swiper-button.swiper-button-next
+
+					.swiper-list
+						.swiper-wrapper
+							- for (let i = 1; i < 7; i++)
+								- for (let i = 1; i < 7; i++)
+									.swiper-slide
+										a(href="img/photos/slider-"+i+".jpg" data-fancybox="1").fancybox.gallery-slide
+											img(src="img/photos/slider-"+i+".jpg", alt="")
+							
+							
+
+
+
+
+				
+		include inc/footer-inner.pug
+		include inc/scripts.pug 

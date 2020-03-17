@@ -18,16 +18,16 @@ h2, h3, h4, h5, h6, p, img, table, .table-wrap, ul, ol
 	&:first-letter
 		text-transform: uppercase	
 
-	&:before
-		content: ""
-		position: absolute em(9) calc(100% + 23px) * *
-		transform: rotateZ(45deg)
-		background: var(--main-color)
-		size: 5px
+
 
 h2, h3, h4, h5, h6
-	font-weight: 300
-	margin-bottom: 5px
+	font-family: var(--second-font)
+	font-style: italic
+	font-weight: 800
+	margin-bottom: 20px
+	color: var(--main-color)
+	text-transform: uppercase
+
 	
 	&:not(:first-child)
 		margin-top: 32px
@@ -36,27 +36,27 @@ h2, h3, h4, h5, h6
 		margin-top: 0
 
 h2
-	font-size: em(28)
+	font-size: rem(28)
 	// line-height: calc(32 / 28)
 	line-height: 128%
 
 h3
-	font-size: em(23)
+	font-size: rem(23)
 	// line-height: calc(28 / 25)
 	line-height: 146%
 
 h4
-	font-size: em(20)
+	font-size: rem(20)
 	// line-height: calc(28 / 22)
 	line-height: 182%
 
 h5
-	font-size: em(18)
+	font-size: rem(18)
 	// line-height: calc(24 / 19)
 	line-height: 135%
 
 h6
-	font-size: em(16)
+	font-size: rem(16)
 	line-height: 140%
 
 blockquote
@@ -85,18 +85,24 @@ table:not([class])
 	margin: 52px 0 20px
 
 	thead
+		tr
+			border-bottom: 2px solid var(--main-color)
+			// th
 
 		th, td
-			background: #151515
-			text-align: left
-			padding-top: 22px
-			padding-bottom: 22px
-			font-size: em(16)
+			background: #272727
+			text-align: center
+			padding: 15px 0
+			font-size: rem(16)
+
+			&:first-child
+				text-align: left
+				padding-left: 60px
 
 	td, th
 		padding: 16px 60px
 		font-weight: inherit
-		font-size: em(14)
+		font-size: rem(14)
 
 		&:not([valign]), &[valign="middle"]
 			vertical-align: middle
