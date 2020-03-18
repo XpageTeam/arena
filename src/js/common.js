@@ -1,4 +1,6 @@
 import $ from "jquery";
+// import stringEffect from "./stringAnimate.js"
+import {TweenLite} from "gsap/TweenMax"
 
 window.jQuery = $
 window.$ = $
