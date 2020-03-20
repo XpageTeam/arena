@@ -20,6 +20,17 @@
 		letter-spacing: 0.06em
 		text-transform: uppercase
 
+	&__cont
+		position: relative
+
+		&:after
+			content: ''
+			width: 100%
+			height: 405px
+			background: linear-gradient(0deg, #161616 7.65%, rgba(22, 22, 22, 0) 100%)
+			position: absolute * 0 0 0
+			z-index: -1
+			pointer-events: none
 
 	&__title
 		color: var(--main-color)
@@ -32,4 +43,30 @@
 		margin-top: 90px
 		display: flex
 		justify-content: center
+
+
+#parallax-container
+	position: relative
+	width: 100%
+	height: 100%
+	padding: 0px
+	margin: 0px
+	background-color: black
+	position: absolute 0 0 0 0
+	z-index: -1
+	overflow: hidden
+	pointer-events: none
+
+	img
+		object-fit: cover
+		object-position: center
+		width: 100%
+
+
+.box
+	position: absolute -40px
+
+.box-1
+	img
+		opacity: .2
 

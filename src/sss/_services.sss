@@ -1,5 +1,6 @@
 .services
-	margin: 100px 0
+	padding: 100px 0
+	position: relative
 
 	&__title
 		font-family: var(--second-font)
@@ -23,6 +24,13 @@
 		display: flex
 		align-items: center
 		padding: 40px 0
+		opacity: 0
+		transform: translate3d(0,20px,0)
+		transition: opacity .3s ease, transform 1s ease
+
+		&.visible
+			opacity: 1
+			transform: translate3d(0,0,0)
 
 		&:after
 			content: ''

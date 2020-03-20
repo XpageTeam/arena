@@ -8,7 +8,16 @@ html(lang="ru")
 	body.main.loading
 		include inc/header.pug
 		main#content
+
 			.main-banner__cont
+				#parallax-container(style="overflow: hidden")
+					.box.box-1.parallax(data-speed-x="5" data-speed-y="5")
+						img(src="img/photos/main-banner.jpg", alt="")
+					.box.box-2.parallax(data-speed-x="20" data-speed-y="20")
+						img(src="img/photos/main-banner-2.jpg", alt="")
+					.box.box-3.parallax(data-speed-x="30" data-speed-y="40")
+						img(src="img/photos/main-banner-3.jpg", alt="")
+
 				.main-banner
 					h1.main-banner__title Аренда поля
 					.main-banner__subtitle для твоей<br> команды
@@ -29,6 +38,11 @@ html(lang="ru")
 								include ../img/ico-area-3.svg
 							.areas__item-title Теннисный стол
 			.services
+				#parallax-container(style="overflow: hidden")
+					.box.parallax(data-speed-x="10" data-speed-y="5")
+						img(src="img/photos/parallax-services-right.png", alt="")
+					.box.parallax(data-speed-x="5" data-speed-y="10")
+						img(src="img/photos/parallax-services-left.png", alt="")
 				.services__title дополнительные услуги
 				.services__list
 					a(href="#").services__item
@@ -129,6 +143,21 @@ html(lang="ru")
 					#map
 						<!--ico-marker.svg-->
 						img(src="img/photos/map.jpg", alt="")
+
+			
+				#parallax-container(style="overflow: hidden")
+					.box.parallax(data-speed-x="5" data-speed-y="5")
+						img(src="img/photos/parallax-map-1.png", alt="")
+					.box.parallax(data-speed-x="8" data-speed-y="3")
+						img(src="img/photos/parallax-map-2.png", alt="")
+					.box.parallax(data-speed-x="5" data-speed-y="9")
+						img(src="img/photos/parallax-map-3.png", alt="")
+					.box.parallax(data-speed-x="1" data-speed-y="8")
+						img(src="img/photos/parallax-map-4.png", alt="")
+					.box.parallax(data-speed-x="7" data-speed-y="2")
+						img(src="img/photos/parallax-map-5.png", alt="")
+					.box.parallax(data-speed-x="6" data-speed-y="8")
+						img(src="img/photos/parallax-map-6.png", alt="")
 
 
 
