@@ -11,11 +11,14 @@
 	&__main, &__nav
 		width: 50% 
 
-	&__nav
 		.swiper
 			&-list
-				height: 100%
 				overflow: hidden
+				height: 100%
+
+	&__nav
+		.swiper
+
 			&-slide
 				height: auto
 
@@ -45,3 +48,22 @@
 
 			&-prev
 				transform: rotate(180deg)
+
+
+@media (max-width: 1200px)
+	
+	.slider-full
+		height: 46vh
+
+
+@media (max-width: 1000px)
+	
+	.slider-full
+		flex-direction: column
+		height: auto
+
+	.slider-full__main
+		width: 100%
+		
+	.slider-full__nav
+		display: none

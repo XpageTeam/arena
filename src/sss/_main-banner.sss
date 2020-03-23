@@ -2,14 +2,46 @@
 	.main-banner
 		&__subtitle
 			color: #fff
-
 .main-banner
 	min-height: 100vh
 	display: flex
 	align-items: center
 	justify-content: center
 	flex-direction: column
+	background-size: 100%
+	background-position: 50% !important
+
+	&__call
+		position: absolute 50% 0 * *
+		z-index: 10
+		padding: 15px 12px
+		border: 1px solid var(--main-color)
+		border-left: 0
+		border-radius: 0 5px 5px 0
+		font-weight: 600
+		font-size: 12px
+		color: var(--main-color)
+		text-transform: uppercase
+		display: flex
+		transition: background .3s ease, color .3s ease
+		transform: translate3d(0,-50%,0) rotate(180deg)
+
+		&:hover
+			background-color: var(--main-color)
+			color: #000
+
+		span
+			writing-mode: vertical-lr
 	
+	&-bg
+		position: absolute 0 0 0 0
+		pointer-events: none
+
+		img
+			object-fit: cover
+			object-position: center
+			size: 100%
+
 	&__title, &__subtitle
 		font-family: var(--second-font)
 		font-style: italic
@@ -22,6 +54,7 @@
 
 	&__cont
 		position: relative
+
 
 		&:after
 			content: ''
@@ -70,3 +103,40 @@
 	img
 		opacity: .2
 
+
+
+@media (max-width: 1500px)
+	
+	.main-banner__btn
+		margin-top: 50px
+
+
+@media (max-height: 700px) and (max-width: 1500px)
+	
+	.main-banner__btn
+		margin-top: 20px
+
+	.main-banner__title, .main-banner__subtitle
+		font-size: 3.38rem
+
+@media (max-width: 1000px)
+	
+	.main-banner
+		min-height: 60vh
+
+	.main-banner__title, .main-banner__subtitle
+		font-size: 2.38rem
+
+
+@media (max-width: 667px)
+	
+	.main-banner__title, .main-banner__subtitle
+		font-size: 2rem
+
+	.main-banner__call
+		display: none
+
+	.main-banner
+		justify-content: flex-end
+		padding-bottom: 30px
+		min-height: 55vh

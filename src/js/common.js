@@ -1,18 +1,19 @@
-import $ from "jquery"
-import { TimelineMax, TweenMax, Linear, TweenLite, TimelineLite } from 'gsap/dist/gsap.js';
+import $ from "jquery";
+import { TimelineMax, TweenMax, Linear, TweenLite, TimelineLite } from 'gsap/all';
 import ScrollMagic from 'scrollmagic';
+
 
 window.jQuery = $
 window.$ = $
 // window.is = is
 
-window.TweenMax = TweenMax;
+window.TweenMax = TweenMax
+window.TweenLite = TweenLite
+window.TimelineMax = TimelineMax
 
-require("scrollmagic/scrollmagic/uncompressed/ScrollMagic.js");
-// require("scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js");
+require("./animation.gsap.js");
 
-import 'imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators'
-import 'imports-loader?define=>false!scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap'
+
 
 require("./jquery.fancybox.js");
 
@@ -59,20 +60,53 @@ document.addEventListener("DOMContentLoaded", function(){
 	if($('.main-banner__cont').length){
 
 	    new ScrollMagic.Scene({
-	    				triggerElement: ".main-banner",
-	    				triggerHook: 0.1,
-	    				duration: 500,
-	    			})
-					.addTo(controller)
-					.setTween(
-		               	new TimelineLite()
-		                .fromTo(".main-banner", 1, {opacity: 0}, {opacity: 1})
-	                );
+			triggerElement: ".main-banner-bg",
+			triggerHook: 0,
+			duration: 1000,
+		})
+		.setTween(
+           	new TimelineMax()
+            .fromTo(".main-banner-bg", .0001, {scale: 1}, {scale: 1.1})
+            .seek(15)
+            // TweenLite.to(".main-banner__cont .box", .1, {
+            // 	scale: 1.1,
+            // 	autoKill: true,
+            //     overwrite: 5,
+            // })
+        )
+		.addTo(controller);
+
+		var tween = TweenMax.fromTo(".main-banner", 1, {y: 0}, {y: -100});
+
+		var mainTitle = new ScrollMagic.Scene({
+			triggerElement: '.areas',
+			trigerHook: .3,
+			duration: 1000,
+		})
+		.setTween(tween)
+        .addTo(controller)
 
 			
 
 
 	}
+
+
+
+
+	var blurElement = {a: 0};
+	var scene = new ScrollMagic.Scene({
+		triggerElement: '.main-banner-bg',
+		duration: 600,
+		triggerHook: 'onLeave'
+	})
+	.setTween(blurElement, 1, {a: 5, onUpdate: applyBlur}) 
+	.addTo(controller);
+	  
+
+	function applyBlur(){
+		TweenMax.set(['.main-banner-bg'], {webkitFilter:"blur(" + blurElement.a + "px)",filter:"blur(" + blurElement.a + "px)"});  
+	};
 
 
 
@@ -118,11 +152,18 @@ document.addEventListener("DOMContentLoaded", function(){
 						nextEl: '.slider-full .swiper-button-next',
 						prevEl: '.slider-full .swiper-button-prev',
 					},
+					breakpoints: {
+					    660: {
+							slidesPerView: 4,
+							slidesPerColumn: 1,
+								
+					    }
+					}
 					
 
 				}
 			},
-
+			
 		});
 
 	
@@ -195,11 +236,7 @@ $(function(){
 					y: (item.position().top + pageY * speedY)*fixer
 				});
 	
-	//or use set - not so smooth, but better performance
-	/*TweenLite.set(item, {
-					x: (item.position().left + pageX * speedX )*fixer,
-					y: (item.position().top + pageY * speedY)*fixer
-				});*/
+	
 				
 			});
 		});	

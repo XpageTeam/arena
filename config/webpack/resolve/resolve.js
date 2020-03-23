@@ -1,3 +1,3 @@
 module.exports = {
-    extensions: require("./extensions/extensions.js"),
+   extensions: require("./extensions/extensions.js"),
 }

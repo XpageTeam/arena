@@ -2,4 +2,4 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 module.exports = mode => ([
 
-].concat(mode == "development" ? new BundleAnalyzerPlugin() : []))
+]/*.concat(mode == "development" ? new BundleAnalyzerPlugin() : [])*/)

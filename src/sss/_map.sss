@@ -1,6 +1,7 @@
 .main
 	.map
-		padding: 100px 0 50px
+		padding: 100px 0 0
+		flex-wrap: wrap
 		
 		&-mask
 
@@ -51,3 +52,41 @@
 		object-fit: cover
 		object-position: center
 	
+
+@media (max-width: 1200px)
+	
+	.main .map
+		padding: 60px 0 0
+
+@media (max-width: 1000px)
+	
+	#map
+		width: 440px
+		height: 382px
+
+	.main 
+		.map-mask
+			&:before
+				right: 100%
+
+			&:after
+				left: 100%
+
+	.map-mask
+		padding: 55px
+		background-size: contain
+
+
+@media (max-width: 667px)
+	
+	#map
+		width: 280px
+		height: 240px
+
+	.map-mask
+		padding: 30px
+
+	.main 
+		.map-mask
+			&:before, &:after
+				display: none
