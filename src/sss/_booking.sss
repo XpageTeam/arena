@@ -192,3 +192,47 @@
 		display: flex
 		justify-content: space-between
 		align-items: center
+
+
+@media (max-width: 1200px)
+	
+	.br
+		&-list
+			display: flex
+			margin: 0 0 -30px -30px
+
+		&-item
+			width: calc((100% - 30px * 3) / 3)
+			margin: 0 0 30px 30px
+
+	.br-bot
+		&__list
+			display: flex
+			margin: 0 0 -30px -30px
+
+		&__item
+			width: calc((100% - 30px * 3) / 3)
+			margin: 0 0 30px 30px
+
+	.booking-stage
+		margin-bottom: 30px
+
+	.bs-title
+		margin-bottom: 10px
+
+	.dates-list
+		padding: 25px 15px
+
+	.dl-item__date
+		width: 30px
+		height: 30px
+
+	.br-bot__item
+		flex-direction: column
+		align-items: flex-start
+
+		br
+			display: none
+
+	.booking-results__bot
+		margin-top: 30px
