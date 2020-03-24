@@ -5,23 +5,25 @@
 .bs
 	&-title
 		color: var(--main-color)
-		margin-bottom: 30px
+		margin-bottom: 15px
 
 	&-dates__title
 		background-color: var(--body-bg-color)
 		padding: 0 15px
-		transform: translate3d(30px,12px,0)
+		transform: translate3d(22px,14px,0)
 		display: inline-block
 
 .dates-list
 	display: flex
-	padding: 40px 30px
-	justify-content: space-between
+	flex-wrap: wrap
+	padding: 40px 20px 15px 20px
 
 	border: 1px solid rgba(131, 131, 131, 0.2)
 	border-radius: 5px
 
 	&__item
+		flex: 1 1 auto
+
 		&--current
 			.dl-item__date
 				background: #1F1F1F
@@ -45,6 +47,7 @@
 		border: 1px solid transparent
 		border-radius: 5px
 		transition: border-color .3s ease-in-out
+		margin-bottom: 5px
 
 		&:hover
 			border-color: var(--main-color)
@@ -230,9 +233,159 @@
 	.br-bot__item
 		flex-direction: column
 		align-items: flex-start
+		
+		&:last-child
+			align-items: flex-end
 
 		br
 			display: none
 
 	.booking-results__bot
 		margin-top: 30px
+
+
+
+	.br-bot__text
+		margin-bottom: 15px
+
+
+// @media (max-width: 1600px)
+// 	.r-dates
+
+// 		&__container
+// 			padding: 15px 30px
+
+// 	.dates-list
+// 		margin-bottom: -10px
+
+// 		&__item
+// 			margin-bottom: 10px
+
+// 	.dl-item
+// 		padding: 8px
+
+
+
+// @media (max-width: 1200px)
+// 	.r-dates
+		
+// 		&__container
+// 			padding: 12px 15px
+
+@media (max-width: 1000px)
+	
+	.dates-list__item
+		flex: none
+
+	.br-row__label
+		padding: 12px 12px
+
+	.br-bot
+		&__item
+			width: auto
+
+		&__list
+			flex-wrap: wrap
+			justify-content: space-between
+
+	.br-row__label:before
+		left: 12px
+
+	.br-row__input:checked + .br-row__label
+		padding-left: 50px
+
+
+@media (max-width: 660px)
+
+
+
+	.r-dates
+		position: relative
+
+		&__container
+			display: block
+
+			&-btn
+				position: absolute 0 * *
+
+				&--next
+					right: 0
+
+				&--prev
+					right: 30px
+
+	.dates-list
+		margin: 0
+		display: grid
+		grid-template-columns: repeat(7, 1fr)
+
+		&__item
+			margin: 0
+			padding: 0 !important
+
+			&:nth-child(n + 8)
+
+				.dl-item
+
+					&__day
+						display: none
+
+	.br
+		&-list
+			flex-wrap: wrap
+
+		&-item
+			width: 100%
+
+			&__rows
+				display: none
+
+	.br-bot
+		&__list
+			margin: 0
+
+		&__item
+			width: 100%
+			margin: 0
+			text-align: center
+
+			&:first-child
+				margin-bottom: 30px
+				align-items: flex-end
+
+			&:last-child
+
+				.btn
+					width: 100%
+					text-align: center
+
+		&__text
+			width: 100%
+
+	.br-item
+		&__top
+			padding: 0
+			margin: 0
+
+		&__name
+			padding: 20px 0
+			width: 100%
+			position: relative
+
+			&:after
+				content: ''
+				display: block
+				size: 6px
+				border-right: 1px solid var(--main-color)
+				border-bottom: 1px solid var(--main-color)
+				transform: rotate(45deg)
+				position: absolute calc(50% - 3px) 0 * *
+
+
+
+
+		&__gallery
+			display: none
+
+		&__rows
+			padding-top: 20px

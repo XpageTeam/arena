@@ -2,6 +2,8 @@ import $ from "jquery";
 import { TimelineMax, TweenMax, Linear, TweenLite, TimelineLite } from 'gsap/all';
 import ScrollMagic from 'scrollmagic';
 
+import "./_mobile-menu.js"
+
 
 window.jQuery = $
 window.$ = $
@@ -18,6 +20,7 @@ require("./animation.gsap.js");
 require("./jquery.fancybox.js");
 
 document.addEventListener("DOMContentLoaded", function(){
+
 	$(".fancybox").fancybox({
 		trapFocus: false,
 		touch: false,
@@ -57,7 +60,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	}
 
-	if($('.main-banner__cont').length){
+	if($('body').hasClass('loading'))
+		$('body').removeClass('loading');
+		$('body').addClass('loaded');
+
+	if($('.main-banner__cont').length && $('body').hasClass('loaded')){
 
 	    new ScrollMagic.Scene({
 			triggerElement: ".main-banner-bg",
@@ -89,24 +96,28 @@ document.addEventListener("DOMContentLoaded", function(){
 			
 
 
+		var blurElement = {a: 0};
+		var scene = new ScrollMagic.Scene({
+			triggerElement: '.main-banner-bg',
+			duration: 600,
+			triggerHook: 'onLeave'
+		})
+		.setTween(blurElement, 1, {a: 5, onUpdate: applyBlur}) 
+		.addTo(controller);
+		  
+
+		function applyBlur(){
+			TweenMax.set(['.main-banner-bg'], {webkitFilter:"blur(" + blurElement.a + "px)",filter:"blur(" + blurElement.a + "px)"});  
+		};
 	}
 
+	if($(window).width() < 667){
+		$('.br-item__name').click(function(){
+			$(this).closest('.br-item__top').toggleClass('js__open');
+			$(this).closest('.br-item__top').siblings('.br-item__rows').slideToggle();
+		})
 
-
-
-	var blurElement = {a: 0};
-	var scene = new ScrollMagic.Scene({
-		triggerElement: '.main-banner-bg',
-		duration: 600,
-		triggerHook: 'onLeave'
-	})
-	.setTween(blurElement, 1, {a: 5, onUpdate: applyBlur}) 
-	.addTo(controller);
-	  
-
-	function applyBlur(){
-		TweenMax.set(['.main-banner-bg'], {webkitFilter:"blur(" + blurElement.a + "px)",filter:"blur(" + blurElement.a + "px)"});  
-	};
+	}
 
 
 
@@ -184,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	if (!gallerySlider)
 		return
 
-	import("swiper/js/swiperNaNesm.js").then(function(Module){
+	import("swiper/js/swiper.esm.js").then(function(Module){
 
 		const {Swiper, Navigation, Keyboard} = Module;
 
@@ -203,6 +214,23 @@ document.addEventListener("DOMContentLoaded", function(){
 				nextEl: '.gallery-slider .swiper-button-next',
 				prevEl: '.gallery-slider .swiper-button-prev',
 			},
+			breakpoints: {
+				1000: {
+					slidesPerView: 4,
+					slidesPerColumn: 2,
+						
+			    },
+				660: {
+					slidesPerView: 2,
+					slidesPerColumn: 2,
+						
+			    },
+			    320: {
+					slidesPerView: 1,
+					slidesPerColumn: 1,
+						
+			    }
+			}
 
 		});
 
@@ -218,33 +246,33 @@ document.addEventListener("DOMContentLoaded", function(){
 $(function(){				
 				
 
-		var $parallaxContainer 	  = $("#content"); //our container
-		var $parallaxItems		    = $parallaxContainer.find(".parallax");  //elements
-		var fixer				          = -0.004;		//experiment with the value
+	var $parallaxContainer 	  = $("#content"); //our container
+	var $parallaxItems		    = $parallaxContainer.find(".parallax");  //elements
+	var fixer				          = -0.004;		//experiment with the value
+	
+
+
+	$(document).on("mousemove", function(event){					
+				
+		var pageX =  event.pageX - ($parallaxContainer.width() * 0.5);  //get the mouseX - negative on left, positive on right
+		var pageY =  event.pageY - ($parallaxContainer.height() * 0.5); //same here, get the y. use console.log(pageY) to see the values
 		
 
-
-		$(document).on("mousemove", function(event){					
-					
-			var pageX =  event.pageX - ($parallaxContainer.width() * 0.5);  //get the mouseX - negative on left, positive on right
-			var pageY =  event.pageY - ($parallaxContainer.height() * 0.5); //same here, get the y. use console.log(pageY) to see the values
+		$parallaxItems.each(function(){
 			
-
-			$parallaxItems.each(function(){
-				
-				var item 	= $(this);
-				var speedX	= item.data("speed-x");  				
-				var speedY	= item.data("speed-y");
-			
-				TweenLite.to(item, 0.5, {
-					x: (item.position().left + pageX * speedX )*fixer,    //calculate the new X based on mouse position * speed 
-					y: (item.position().top + pageY * speedY)*fixer
-				});
-	
-	
-				
+			var item 	= $(this);
+			var speedX	= item.data("speed-x");
+			var speedY	= item.data("speed-y");
+		
+			TweenLite.to(item, 0.5, {
+				x: (item.position().left + pageX * speedX )*fixer,    //calculate the new X based on mouse position * speed 
+				y: (item.position().top + pageY * speedY)*fixer
 			});
-		});	
 
 
-	});
+			
+		});
+	});	
+
+
+});

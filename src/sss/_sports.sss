@@ -1,4 +1,9 @@
 .sports
+
+	&-cont
+		margin: auto
+		flex: 1 1 auto
+
 	&__title
 		font-family: var(--second-font)
 		font-style: italic
@@ -44,3 +49,25 @@
 		&-img
 			margin-right: 50px
 			flex: none
+
+@media (max-width: 1500px)
+	
+	.sports
+		&__item
+			padding: 20px 0
+
+		&__title
+			font-size: 30px
+			margin-bottom: 40px
+
+
+@media (max-width: 667px)
+	.sports__item
+		padding: 15px 0
+
+		&-img
+			margin-right: 20px
+			
+	.sports__title
+		font-size: 1.4rem
+		margin-bottom: 25px

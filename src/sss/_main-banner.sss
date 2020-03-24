@@ -2,6 +2,13 @@
 	.main-banner
 		&__subtitle
 			color: #fff
+
+
+.loading
+	.main-banner
+		&-bg
+			filter: blur(30px)
+
 .main-banner
 	min-height: 100vh
 	display: flex
@@ -36,6 +43,7 @@
 	&-bg
 		position: absolute 0 0 0 0
 		pointer-events: none
+		transition: filter 1s ease-in-out
 
 		img
 			object-fit: cover
@@ -78,30 +86,7 @@
 		justify-content: center
 
 
-#parallax-container
-	position: relative
-	width: 100%
-	height: 100%
-	padding: 0px
-	margin: 0px
-	background-color: black
-	position: absolute 0 0 0 0
-	z-index: -1
-	overflow: hidden
-	pointer-events: none
 
-	img
-		object-fit: cover
-		object-position: center
-		width: 100%
-
-
-.box
-	position: absolute -40px
-
-.box-1
-	img
-		opacity: .2
 
 
 

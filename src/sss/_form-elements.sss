@@ -169,8 +169,12 @@ textarea.default-input__input
 			overflow: hidden
 			pointer-events: none
 
+
 		&-filetext
 			position: relative
+
+			input
+				padding-right: 60px !important
 
 		&[readonly]
 			cursor: default
@@ -336,3 +340,6 @@ body
 
 		> div[id*="comp"]
 			height: 100%
+
+	.form__inputs-input--col-2
+		grid-column: auto

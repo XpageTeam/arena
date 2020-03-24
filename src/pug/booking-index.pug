@@ -5,10 +5,18 @@ html(lang="ru")
 		title Выберите вид спорта
 		include inc/head.pug
 		include inc/css.pug
-	body.inner.loading
+	body.inner.loading(style="background-image: url('img/photos/booking-bg.png'); overflow: hidden")
 		include inc/header.pug
 		main#content
-			.sports-cont
+			.sports-cont(style="")
+				.parallax-container
+					//- .box.box-1.parallax(data-speed-x="5" data-speed-y="5")
+					//- 	img(src="img/photos/booking-bg.jpg", alt="")
+					.box.box-2.parallax(data-speed-x="2" data-speed-y="10")
+						img(src="img/photos/main-banner-2.jpg", alt="")
+					.box.box-3.parallax(data-speed-x="10" data-speed-y="5")
+						img(src="img/photos/main-banner-3.jpg", alt="")
+
 				.wrapper
 					.sports
 						.sports__title Выберите вид спорта

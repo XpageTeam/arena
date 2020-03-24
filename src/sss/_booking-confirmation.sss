@@ -9,6 +9,7 @@
 		&:first-child
 			max-width: 310px
 			flex: 1 1 auto
+			padding-right: 20px
 
 .bc-list
 	&:not(:first-child)
@@ -43,3 +44,30 @@
 
 		&-btn
 			margin-right: 20px
+
+
+@media (max-width: 1400px)
+	
+	.bc-form 
+		.form__inputs--4
+			grid-template-columns: repeat(3, 1fr)
+
+		.form__submit
+			align-items: flex-start
+			flex-direction: column-reverse
+
+			&-btn
+				margin-top: 20px
+
+@media (max-width: 1000px)
+	
+	.bc-form 
+		.form__inputs--4
+			grid-template-columns: repeat(2, 1fr)
+
+
+@media (max-width: 667px)
+	
+	.bc-form 
+		.form__inputs--4
+			grid-template-columns: 1fr

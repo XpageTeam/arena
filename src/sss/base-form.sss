@@ -57,3 +57,34 @@
 
 		img
 			display: block
+
+
+@media (max-width: 1000px)
+	
+	.popup
+		padding: 50px !important
+
+
+@media (max-width: 667px)
+
+	.fancybox-slide::before
+		display: none
+	
+	.popup
+		padding: 20px !important
+		border: 0
+		// mar
+
+		&__title
+			margin: 0 0 20px
+			font-size: 1.3rem
+
+		.form__submit
+			margin: 30px 0 0
+
+			&-btn
+				width: 100%
+				margin: 20px 0 0 0
+
+				input
+					width: 100%
