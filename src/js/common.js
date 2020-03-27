@@ -196,12 +196,8 @@ document.addEventListener("DOMContentLoaded", function(){
 		return
 
 	import("swiper/js/swiper.esm.js").then(function(Module){
-
 		const {Swiper, Navigation, Keyboard} = Module;
-
 		Swiper.use([Navigation, Keyboard]);
-
-
 
 		new Swiper(gallerySlider, {
 			slidesPerView: 4,
@@ -227,21 +223,60 @@ document.addEventListener("DOMContentLoaded", function(){
 			    },
 			    320: {
 					slidesPerView: 1,
-					slidesPerColumn: 1,
-						
+					slidesPerColumn: 1,	
 			    }
 			}
 
 		});
 
+	});
+
+})
+
+
+document.addEventListener("DOMContentLoaded", function(){
+	const zoneSlider = document.querySelector('.zone-slider .swiper-list');
 	
-	
+	if (!zoneSlider)
+		return
+
+	import("swiper/js/swiper.esm.js").then(function(Module){
+		const {Swiper, Navigation, Keyboard, Lazy} = Module;
+		Swiper.use([Navigation, Keyboard, Lazy]);
+
+		new Swiper(zoneSlider, {
+			slidesPerView: 4,
+			spaceBetween: 25,
+			keyboard: {
+				enabled: true,
+				onlyInViewport: true
+			},
+			lazy: {
+				// loadPrevNext: 1,
+				loadPrevNextAmount: 1,
+			},
+			navigation: {
+				nextEl: '.zone-slider .swiper-button-next',
+				prevEl: '.zone-slider .swiper-button-prev',
+			},
+			breakpoints: {
+				1000: {
+					slidesPerView: 4,
+			    },
+				660: {
+					slidesPerView: 2,
+			    },
+			    320: {
+					slidesPerView: 1,
+			    }
+			}
+
+		});
 
 	});
 
-
-
 })
+
 
 $(function(){				
 				

@@ -7,8 +7,10 @@ document.addEventListener("DOMContentLoaded", function(){
 	})
 
 	var menu = $('.h-menu__list').clone();
+	var btn = $('.head .head-btn').clone();
 
 	$('.mobile-menu').append(menu);
+	$('.mobile-menu').append(btn);
 
 
 

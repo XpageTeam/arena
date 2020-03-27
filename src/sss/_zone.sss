@@ -1,0 +1,230 @@
+.page-zone
+	.head-cont
+		position: absolute 0 0 * 0
+
+	&--football
+		.box
+			&-1
+				position: absolute -67px -253px 0 0
+			&-2
+				position: absolute
+				width: 1227px
+				height: 877px
+				left: 586px
+				top: -25px
+
+		
+
+	&--volleyball
+		.box
+			&-1
+				width: 1025px
+				height: 940px
+				left: 12px
+				top: 315px
+
+			&-2
+				position: absolute 0 0 0 0
+
+			&-3
+				position: absolute 0 0 0 0
+
+	&--tennis
+		.box
+			position: absolute 0 0 0 0
+
+
+
+
+
+
+
+
+.zone-banner
+	position: absolute 0 0 0 0
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	z-index: 10
+
+	&__cont
+		position: relative
+		height: 100vh
+
+		&:after
+			content: ''
+			display: block
+			position: absolute 0 0 0 0
+			background: rgba(0, 0, 0, 0.06)
+
+		&:before
+			content: ''
+			position: absolute * 0 0 0
+			height: 503px
+			background: linear-gradient(0deg, #161616 7.65%, rgba(22, 22, 22, 0) 100%)
+
+	&__title
+		font-family: var(--second-font)
+		font-style: italic
+		font-weight: 800
+		font-size: 70px
+		line-height: 122.4%
+		letter-spacing: 0.06em
+		text-transform: uppercase
+		color: transparent
+		-webkit-text-stroke: 1px #fff
+
+	&__subtitle
+		font-family: var(--second-font)
+		font-style: italic
+		font-weight: 800
+		font-size: 70px
+		line-height: 122.4%
+
+		text-align: center
+		letter-spacing: 0.06em
+		text-transform: uppercase
+
+		color: var(--main-color)
+
+	&__btn
+		margin-top: 90px
+		display: flex
+		justify-content: center
+
+	&__mobile
+		img
+			object-fit: cover
+			object-position: center
+			size: 100%
+
+.zone-advantages
+	padding: 30px 20px
+
+	&__item
+		display: flex
+		align-items: center
+		padding: 15px 0
+
+		&:not(:last-child)
+			border-bottom: 1px solid var(--main-color)
+
+		&-ico
+			flex: none
+			margin-right: 20px
+			display: flex
+
+.zone-slider
+	position: relative
+	padding: 0 25px
+
+	.swiper-list 
+		overflow: hidden
+
+	&__arrow
+		position: absolute calc(50% - 25px) 0 * 0
+		display: flex
+		justify-content: space-between
+
+	&__slide
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+			display: block
+
+.zone-about
+	margin: 100px 0 0
+	padding: 0 20px
+	display: flex
+	flex-direction: column
+	align-items: center
+
+	&__title
+		font-size: rem(18)
+		margin-bottom: 35px
+
+	&__text
+		max-width: 840px
+		text-align: center
+
+
+@media (max-width: 1500px)
+	
+	.zone-banner__btn
+		margin-top: 50px
+
+
+@media (max-height: 700px) and (max-width: 1500px)
+	
+	.zone-banner__btn
+		margin-top: 20px
+
+	.zone-banner__title, .zone-banner__subtitle
+		font-size: 3.38rem
+
+@media (max-width: 1000px)
+	
+	// .zone-banner
+	// 	min-height: 60vh
+
+	.zone-banner__cont
+		height: 50vh
+
+	.zone-banner__title, .zone-banner__subtitle
+		font-size: 2.38rem
+
+
+
+
+@media (min-width: 1000px)
+	
+	.zone-advantages--mobile
+		display: none
+
+@media (min-width: 667px)
+	
+	.zone-banner__mobile
+		display: none
+	
+@media (max-width: 667px)
+
+	picture
+		display: block
+
+	.zone-about
+		margin: 50px 0 0
+
+	.zone-about
+		&__title
+			margin-bottom: 20px
+
+	.zone-slider
+		padding: 30px
+
+	
+	.page-zone
+
+		.zone-banner__cont
+			height: auto
+			background: none !important
+
+			&:before, &:after
+				display: none
+
+		.parallax-container
+			display: none
+
+		.zone-banner
+			min-height: auto
+
+	.zone-banner__title, .zone-banner__subtitle
+		font-size: 2rem
+
+	.zone-banner__call
+		display: none
+
+	.zone-banner
+		padding-bottom: 30px

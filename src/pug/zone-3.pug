@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Тенисного стола
+		include inc/head.pug
+		include inc/css.pug
+	body.page-zone.page-zone--tennis.loading
+		include inc/header.pug
+		main#content
+			.zone-banner__cont(style="background-image: url('img/photos/zone-banner-bg-1.png'); overflow: hidden")
+				.banner-info
+					include ../img/photos/banner-text-tennis.svg
+				picture.zone-banner__mobile
+					source(srcset="img/photos/banner-tennis.jpg" media="screen and (max-width: 700px)") 
+					img
+				.parallax-container
+					.box.box-2.parallax(data-speed-x="6" data-speed-y="0")
+						img(src="img/photos/zone3-2.png")
+					.box.box-1.parallax(data-speed-x="0" data-speed-y="5")
+						img(src="img/photos/zone3-1.png")
+					.box.box-3.parallax(data-speed-x="1" data-speed-y="0")
+						img(src="img/photos/zone3-3.png")
+
+				.zone-banner
+					h1.zone-banner__title Аренда
+					.zone-banner__subtitle Тенисного<br> стола
+					.zone-banner__btn
+						a(href="").btn забронировать стол
+
+			
+			.zone-advantages.zone-advantages--mobile
+				.zone-advantages__list
+					.zone-advantages__item
+						.zone-advantages__item-ico
+							img(src="img/ico-zone-advantages.svg")
+						.zone-advantages__item-text Находятся 2 современных теннисных стола
+					.zone-advantages__item
+						.zone-advantages__item-ico
+							img(src="img/ico-zone-advantages.svg")
+						.zone-advantages__item-text Профессиональная разметка
+					.zone-advantages__item
+						.zone-advantages__item-ico
+							img(src="img/ico-zone-advantages.svg")
+						.zone-advantages__item-text Нескользящее напольное покрытие
+					.zone-advantages__item
+						.zone-advantages__item-ico
+							img(src="img/ico-zone-advantages.svg")
+						.zone-advantages__item-text Перегородка между столами
+
+
+
+			.zone-slider
+				.zone-slider__arrow
+					.swiper-button.swiper-button-prev
+					.swiper-button.swiper-button-next
+
+				.swiper-list
+					.swiper-wrapper
+						- for (let i = 1; i < 8; i++)
+							.swiper-slide
+								a(href="img/photos/zone3-"+i+".jpg" data-fancybox="1").fancybox.zone-slider__slide
+									img(data-src="img/photos/zone3-"+i+".jpg", alt="").swiper-lazy
+						
+							
+						
+			.zone-about
+				.zone-about__title Тенисный стол
+				.zone-about__text Зал имеет напольное покрытие толщиной 8,3 мм, предназначенное для полупрофессиональных и профессиональных многоцелевых и игровых площадок. Покрытие имеет максимально возможную толщину, а значит — лучший амортизационный показатель, обеспечивающий максимальный комфорт для спортсменов.
+							
+							
+			.map
+				.map-mask
+					#map
+						<!--ico-marker.svg-->
+						img(src="img/photos/map.jpg", alt="")
+
+			
+				#parallax-container(style="overflow: hidden")
+					.box.parallax(data-speed-x="5" data-speed-y="5")
+						img(src="img/photos/parallax-map-1.png", alt="")
+					.box.parallax(data-speed-x="8" data-speed-y="3")
+						img(src="img/photos/parallax-map-2.png", alt="")
+					.box.parallax(data-speed-x="5" data-speed-y="9")
+						img(src="img/photos/parallax-map-3.png", alt="")
+					.box.parallax(data-speed-x="1" data-speed-y="8")
+						img(src="img/photos/parallax-map-4.png", alt="")
+					.box.parallax(data-speed-x="7" data-speed-y="2")
+						img(src="img/photos/parallax-map-5.png", alt="")
+					.box.parallax(data-speed-x="0" data-speed-y="8")
+						img(src="img/photos/parallax-map-6.png", alt="")
+
+				include inc/footer.pug
+		include inc/scripts.pug 

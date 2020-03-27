@@ -27,6 +27,7 @@
 @import "_standart-page.sss"
 @import "_text-styles.sss"
 @import "_mobile-menu.sss"
+@import "_zone.sss"
 
 
 body
@@ -44,10 +45,9 @@ body
 	height: 100%
 	padding: 0px
 	margin: 0px
-	background-color: black
+	// background-color: black
 	position: absolute 0 0 0 0
-	z-index: -1
-	overflow: hidden
+	z-index: 1
 	pointer-events: none
 
 	img
@@ -59,15 +59,35 @@ body
 .box
 	position: absolute 0
 
-.box-1
-	img
-		opacity: .2
 
+.main
+	.box-1
+		img
+			opacity: .2
+
+
+.banner-info
+	position: absolute 0 0 0 0
+	z-index: 20
+
+	svg
+		size: 100% !important
+
+	*
+		font-family: inherit
 
 @media (max-width: 1000px)
 	
-	#parallax-container
+	#parallax-container, .banner-info
 		display: none
+
+
+
+@media (max-width: 667px)
+	
+	.swiper-button
+		width: 40px
+		height: 40px
 
 
 

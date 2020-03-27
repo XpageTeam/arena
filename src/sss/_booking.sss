@@ -76,6 +76,32 @@
 			display: flex
 			flex: none
 
+.bs-dates__container
+	position: relative
+
+	&-btn
+		size: 24px
+		position: absolute
+		top: -12px
+		background-color: var(--main-color)
+		border-radius: 50%
+		cursor: pointer
+
+		&:before
+			content: ''
+			display: block
+			position: absolute calc(50% - 3px) calc(50% - 3px) * *
+			size: 6px
+			border-right: 1px solid #000
+			border-top: 1px solid #000
+			transform: rotate(45deg)
+
+		&--prev
+			right: 65px
+			transform: rotate(180deg)
+
+		&--next
+			right: 30px
 
 .booking-results
 	margin-top: 60px
@@ -116,7 +142,7 @@
 				&:before
 					content: ''
 					display: block
-					size: 10px
+					size: 11px 10px
 					background-image: url('../img/ico-photo.svg')
 					background-repeat: no-repeat
 					background-position: 50%
@@ -249,28 +275,7 @@
 		margin-bottom: 15px
 
 
-// @media (max-width: 1600px)
-// 	.r-dates
 
-// 		&__container
-// 			padding: 15px 30px
-
-// 	.dates-list
-// 		margin-bottom: -10px
-
-// 		&__item
-// 			margin-bottom: 10px
-
-// 	.dl-item
-// 		padding: 8px
-
-
-
-// @media (max-width: 1200px)
-// 	.r-dates
-		
-// 		&__container
-// 			padding: 12px 15px
 
 @media (max-width: 1000px)
 	
@@ -366,6 +371,7 @@
 		&__top
 			padding: 0
 			margin: 0
+			flex-direction: column
 
 		&__name
 			padding: 20px 0
@@ -385,7 +391,7 @@
 
 
 		&__gallery
-			display: none
+			padding-bottom: 10px
 
 		&__rows
 			padding-top: 20px
