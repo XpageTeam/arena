@@ -6,6 +6,7 @@
 		.box
 			&-1
 				position: absolute -67px -253px 0 0
+
 			&-2
 				position: absolute
 				width: 1227px
@@ -26,8 +27,12 @@
 			&-2
 				position: absolute 0 0 0 0
 
+		
+
 			&-3
 				position: absolute 0 0 0 0
+
+		
 
 	&--tennis
 		.box
@@ -37,8 +42,43 @@
 
 
 
+@media (min-width: 1921px)
+
+.page-zone
+	.head-cont
+		position: absolute 0 0 * 0
+
+	&--football
+		.box
+
+			&-1
+				position: absolute -67px -253px 0 0
+
+			&-2
+				position: absolute
+				width: 1227px
+				height: 877px
+				left: 586px
+				top: -25px
+
+		
+
+	&--volleyball
+		.box
+			img
+				width: 100%
+
+			&-2
+				position: absolute -40px
 
 
+			&-3
+				position: absolute -40px
+
+	&--tennis
+		.box
+			img
+				width: 100%
 
 .zone-banner
 	position: absolute 0 0 0 0
@@ -51,6 +91,7 @@
 	&__cont
 		position: relative
 		height: 100vh
+		background-size: cover
 
 		&:after
 			content: ''
