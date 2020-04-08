@@ -1,6 +1,7 @@
 import $ from "jquery";
 import { TimelineMax, TweenMax, Linear, TweenLite, TimelineLite } from 'gsap/all';
 import ScrollMagic from 'scrollmagic';
+import IMask from 'imask';
 
 import "./_mobile-menu.js"
 
@@ -8,6 +9,7 @@ import "./_mobile-menu.js"
 window.jQuery = $
 window.$ = $
 // window.is = is
+window.IMask = IMask
 
 window.TweenMax = TweenMax
 window.TweenLite = TweenLite
