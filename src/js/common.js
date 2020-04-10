@@ -2,8 +2,7 @@ import $ from "jquery";
 import { TimelineMax, TweenMax, Linear, TweenLite, TimelineLite } from 'gsap/all';
 import ScrollMagic from 'scrollmagic';
 import IMask from 'imask';
-
-import "./_mobile-menu.js"
+import "./_mobile-menu.js";
 
 
 window.jQuery = $
@@ -16,9 +15,6 @@ window.TweenLite = TweenLite
 window.TimelineMax = TimelineMax
 
 require("./animation.gsap.js");
-
-
-
 require("./jquery.fancybox.js");
 
 document.addEventListener("DOMContentLoaded", function(){

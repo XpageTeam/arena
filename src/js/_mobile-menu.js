@@ -10,11 +10,6 @@ document.addEventListener("DOMContentLoaded", function(){
 	var btn = $('.head .head-btn').clone();
 
 	$('.mobile-menu .mobile-menu__links').append(menu);
-	$('.mobile-menu .mobile-menu__links').append(btn);
+	$('.mobile-menu .mobile-menu__links').append(btn)
 
-
-
-
-
-	
 })
