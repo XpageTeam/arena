@@ -1,10 +1,14 @@
 .gallery-slider
 	position: relative
 	height: 65vh
+
 	// height: 644px
+
+
 
 	.gallery-slide
 		display: block
+		outline: none
 
 	.gallery-slider__arrow
 		position: absolute * 0 0 0
@@ -18,6 +22,7 @@
 		height: 100%
 
 		.swiper-slide
+			display: flex
 			height: 50%
 
 			img
@@ -49,3 +54,8 @@
 	&-prev
 		transform: rotate(180deg)
 
+
+@media (max-width: 667px)
+
+	.gallery-slider
+		height: auto 

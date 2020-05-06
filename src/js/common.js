@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	}
 
 	if($(window).width() < 667){
-		$('.br-item__name').click(function(){
+		$('body').on('click', '.br-item__name', function(){
 			$(this).closest('.br-item__top').toggleClass('js__open');
 			$(this).closest('.br-item__top').siblings('.br-item__rows').slideToggle();
 		})

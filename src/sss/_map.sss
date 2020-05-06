@@ -27,6 +27,10 @@
 	display: flex
 	justify-content: center
 
+	.bx-yandex-map
+		width: 100% !important
+		min-height: 100% !important
+
 	&-mask
 		position: relative
 		padding: 80px
@@ -40,9 +44,12 @@
 #map
 	position: relative
 	background-size: contain
+	overflow: hidden
 	size: 545px 469px
 	clip-path: polygon(45% -40%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)
 
+	.bx-yandex-map
+		size: 545px 469px !important
 
 
 
@@ -69,8 +76,8 @@
 	
 	.inner
 		#map
-			width: 450px
-			height: 385px
+			size: 450px 385px
+			
 
 		.map-mask
 			padding: 55px
@@ -79,8 +86,10 @@
 @media (max-width: 1000px)
 	
 	#map
-		width: 440px
-		height: 382px
+		size: 440px 382px
+
+		.bx-yandex-map
+			size: 440px 382px !important
 
 	.main, .page-zone 
 		.map-mask
@@ -98,8 +107,11 @@
 @media (max-width: 667px)
 	
 	#map
-		width: 280px
-		height: 240px
+		size: 280px 240px
+
+		.bx-yandex-map
+			size: 280px 240px !important
+		
 
 	.map-mask
 		padding: 30px
