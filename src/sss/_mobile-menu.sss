@@ -95,13 +95,21 @@ body:not(.js__menu--open)
 	opacity: 0
 
 	&__logo
-		width: 140px
+		width: 100px
+		display: flex
+		position: absolute 50% * * 50%
+		transform: translate3d(-50%,-50%,0)
+
+	&__phone
+		font-size: rem(12)
 
 
 
 	&__header
+		position: relative
 		padding: 20px
 		display: flex
+
 		justify-content: space-between
 		align-items: center
 		flex: none

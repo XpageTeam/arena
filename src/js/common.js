@@ -118,9 +118,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	}
 
 
-
 });
-
 
 document.addEventListener("DOMContentLoaded", function(){
 	const photosBuySlider = document.querySelector('.slider-full__main .swiper-list');
@@ -134,10 +132,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
 		Swiper.use([Navigation, EffectFade, Thumbs, Keyboard]);
 
-
-
 		new Swiper(photosBuySlider, {
 			effect: "fade",
+			loop: true,
 			fadeEffect: {
 				crossFade: true
 			},
@@ -146,42 +143,64 @@ document.addEventListener("DOMContentLoaded", function(){
 				enabled: true,
 				onlyInViewport: true
 			},
+			// navigation: {
+			// 	nextEl: '.slider-full .swiper-button-next',
+			// 	prevEl: '.slider-full .swiper-button-prev',
+			// },
+
+		});
+
+	});
+})
+
+
+document.addEventListener("DOMContentLoaded", function(){
+	const photosBuySlider = document.querySelector('.slider-full__nav .swiper-list');
+	
+	if (!photosBuySlider)
+		return
+
+	import("swiper/js/swiper.esm.js").then(function(Module){
+
+		const {Swiper, Navigation, EffectFade, Thumbs, Keyboard} = Module;
+
+		Swiper.use([Navigation, EffectFade, Thumbs, Keyboard]);
+
+		new Swiper(photosBuySlider, {
+			slidesPerView: 2,
+			slidesPerColumn: 2,
+			slidesPerColumnFill: 'column',
+			slidesPerGroup: 2,
+			loop: true,
+			loopFillGroupWithBlank: true,
+			loopAdditionalSlides: 10,
 			navigation: {
 				nextEl: '.slider-full .swiper-button-next',
 				prevEl: '.slider-full .swiper-button-prev',
 			},
-			thumbs: {
-				swiper: {
-					el: '.slider-full__nav .swiper-list',
-					slidesPerView: 2,
-					slidesPerColumn: 2,
-					multipleActiveThumbs: false,
-					loop: false,
-					navigation: {
-						nextEl: '.slider-full .swiper-button-next',
-						prevEl: '.slider-full .swiper-button-prev',
-					},
-					breakpoints: {
-						660: {
-							slidesPerView: 2,
-							slidesPerColumn: 2,
-								
-					    },
-					    320: {
-							slidesPerView: 4,
-							slidesPerColumn: 1,
-								
-					    }
-					}
-					
-
-				}
-			},
+			// keyboard: {
+			// 	enabled: true,
+			// 	onlyInViewport: true
+			// },
+			// breakpoints: {
+			// 	1000: {
+			// 		slidesPerColumn: 2,
+						
+			// 	},
+			// 	660: {
+			// 		slidesPerView: 2,
+			// 		slidesPerColumn: 2,
+						
+			// 	},
+			// 	320: {
+			// 		slidesPerView: 4,
+			// 		slidesPerColumn: 1,
+						
+			// 	}
+			// },
+		
 			
 		});
-
-	
-	
 
 	});
 })
