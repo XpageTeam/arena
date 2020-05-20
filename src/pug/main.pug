@@ -69,77 +69,19 @@ html(lang="ru")
 						.services__item-img
 							include ../img/ico-serv-5.svg
 						.services__item-title Квест комната
-			.slider-full
-				.slider-full__arrow
+			.gallery-slider
+				.gallery-slider__arrow
 					.swiper-button.swiper-button-prev
 					.swiper-button.swiper-button-next
 
-				.slider-full__main
-					.swiper-list
-						.swiper-wrapper
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-1.jpg", alt="")
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-2.jpg", alt="")
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-3.jpg", alt="")
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-4.jpg", alt="")
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-5.jpg", alt="")
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-6.jpg", alt="")
-				.slider-full__nav
-					.swiper-list
-						.swiper-wrapper
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-1.jpg", alt="")
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-2.jpg", alt="")
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-3.jpg", alt="")
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-4.jpg", alt="")
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-5.jpg", alt="")
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-6.jpg", alt="")
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-1.jpg", alt="")
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-2.jpg", alt="")
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-3.jpg", alt="")
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-4.jpg", alt="")
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-5.jpg", alt="")
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-6.jpg", alt="")
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-1.jpg", alt="")
-							.swiper-slide
-								figure.slider-full__slide
-									img(src="img/photos/slider-2.jpg", alt="")
+				.swiper-list
+					.swiper-wrapper
+						- for (let i = 1; i < 7; i++)
+							- for (let i = 1; i < 7; i++)
+								.swiper-slide
+									a(href="img/photos/slider-"+i+".jpg" data-fancybox="1").fancybox.gallery-slide
+										img(src="img/photos/slider-"+i+".jpg", alt="")
+							
 							
 							
 			.map

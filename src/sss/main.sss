@@ -14,7 +14,7 @@
 @import "_main-banner.sss"
 @import "_areas.sss"
 @import "_services.sss"
-@import "_slider-full.sss"
+// @import "_slider-full.sss"  переделал на слайдер из галереи
 @import "_map.sss"
 @import "_footer.sss"
 @import "_booking.sss"
@@ -28,7 +28,18 @@
 @import "_text-styles.sss"
 @import "_mobile-menu.sss"
 @import "_zone.sss"
+@import "notificator.sss"
 
+.wrapper
+	.wrapper
+		padding: 0
+
+.payment-success
+	.button-success
+		display: flex
+		> *
+			&:not(:last-child)
+				margin-right: 20px
 
 body
 	&[style*="background"]
@@ -91,6 +102,13 @@ body
 	.swiper-button
 		width: 40px
 		height: 40px
+
+	.payment-success
+		.button-success
+			flex-direction: column
+			> *
+				&:not(:last-child)
+					margin: 0 0 20px 0
 
 
 

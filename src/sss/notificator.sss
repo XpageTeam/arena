@@ -1,0 +1,29 @@
+.notificator
+    position: fixed 0 0 *
+    z-index: 99999 // то адекватно
+    padding: 15px 0
+    transition: transform .3s ease
+    color: #fff
+    will-change: transform
+
+    a
+        border-bottom-color: #fff
+    
+    &:not(.js__show)
+        transform: translate3d(0, -100%, 0)
+
+    &:not(.error):not(.success)
+        background: #B0B0AF !important
+
+    &.success
+        background-color: #FDBA38
+
+    &.error
+        background: var(--second-color)
+
+    a
+        color: inherit !important
+    
+    &__text
+        font-size: em(14)
+        text-align: center
