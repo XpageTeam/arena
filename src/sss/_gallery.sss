@@ -54,14 +54,17 @@
 		transform: rotate(180deg)
 
 .gallery
+	margin: 0 40px
+
 	&__list
 		display: flex
 		flex-wrap: wrap
-		// margin: 0 0 -30px -30px
+		margin: 0 0 -40px -40px
+
 
 	&__item
-		width: calc(100% / 4)
-		// margin: 0 0 30px 30px
+		width: calc((100% - 40px * 4) / 4)
+		margin: 0 0 40px 40px
 
 		img
 			display: block
@@ -69,9 +72,10 @@
 @media (max-width: 1000px)
 
 	.gallery
+		margin: 0 20px
 
 		&__item
-			width: calc(100% / 3)
+			width: calc((100% - 40px * 3) / 3)
 
 @media (max-width: 667px)
 
@@ -79,6 +83,9 @@
 		height: auto
 
 	.gallery
+		&__list
+			margin: 0 0 -20px -20px
 
 		&__item
-			width: calc(100% / 2)
+			width: calc((100% - 20px * 2) / 2)
+			margin: 0 0 20px 20px
