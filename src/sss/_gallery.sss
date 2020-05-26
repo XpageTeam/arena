@@ -53,8 +53,32 @@
 	&-prev
 		transform: rotate(180deg)
 
+.gallery
+	&__list
+		display: flex
+		flex-wrap: wrap
+		// margin: 0 0 -30px -30px
+
+	&__item
+		width: calc(100% / 4)
+		// margin: 0 0 30px 30px
+
+		img
+			display: block
+
+@media (max-width: 1000px)
+
+	.gallery
+
+		&__item
+			width: calc(100% / 3)
 
 @media (max-width: 667px)
 
 	.gallery-slider
-		height: auto 
+		height: auto
+
+	.gallery
+
+		&__item
+			width: calc(100% / 2)
