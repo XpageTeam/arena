@@ -12,14 +12,14 @@
   "author": "danil.khandys",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
-    "@types/node": "^12.0.2",
+    "@babel/core": "^7.10.1",
+    "@babel/preset-env": "^7.10.1",
+    "@types/node": "^12.12.42",
     "babel": "^6.23.0",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "^8.1.0",
     "browser-sync": "^2.26.5",
     "child_process": "^1.0.2",
-    "css-color-converter": "^1.1.0",
+    "css-color-converter": "^1.1.1",
     "css-loader": "^1.0.0",
     "cssnano": "^4.1.8",
     "gulp": "^4.0.2",
@@ -34,10 +34,10 @@
     "gulp-util": "^3.0.8",
     "imagemin-jpeg-recompress": "^6.0.0",
     "imports-loader": "^0.8.0",
-    "postcss": "^7.0.14",
+    "postcss": "^7.0.31",
     "postcss-assets": "^5.0.0",
     "postcss-attribute-case-insensitive": "^3.0.1",
-    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-font-magician": "^2.2.1",
     "postcss-functions": "^3.0.0",
     "postcss-import": "^12.0.0",
@@ -49,10 +49,10 @@
     "style-loader": "^0.23.0",
     "sugarss": "^2.0.0",
     "ts-loader": "^5.3.3",
-    "typescript": "^3.4.3",
+    "typescript": "^3.9.3",
     "vinyl-ftp": "^0.6.1",
-    "webpack": "^4.29.6",
-    "webpack-bundle-analyzer": "^3.3.2",
+    "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.8.0",
     "webpack-cli": "^3.3.0"
   },
   "browserslist": [
@@ -64,10 +64,10 @@
     "last 1 ie version"
   ],
   "dependencies": {
-    "gsap": "^3.2.4",
-    "imask": "^6.0.3",
-    "jquery": "^3.4.1",
+    "gsap": "^3.2.6",
+    "imask": "^6.0.5",
+    "jquery": "^3.5.1",
     "scrollmagic": "^2.0.7",
-    "swiper": "^5.3.6"
+    "swiper": "^5.4.1"
   }
 }
